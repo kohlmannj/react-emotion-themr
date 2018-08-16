@@ -18,7 +18,6 @@
   "scripts": {
     "build": "babel --source-maps --out-dir ./lib ./src",
     "clean": "rimraf lib",
-    "coverage": "npm run test -- --coverage && coveralls",
     "prepublishOnly": "npm run clean && npm run test && NODE_ENV=production npm run build",
     "dev": "npm run build -- --watch",
     "test": "NODE_ENV=test jest"
