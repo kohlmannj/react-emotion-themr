@@ -11,6 +11,10 @@
   "publishConfig": {
     "access": "public"
   },
+  "engines": {
+    "node": ">= 8.11.1",
+    "yarn": ">= 1.9.4"
+  },
   "scripts": {
     "build": "babel --source-maps --out-dir ./lib ./src",
     "clean": "rimraf lib",
