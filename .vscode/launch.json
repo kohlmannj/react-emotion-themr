@@ -12,6 +12,7 @@
       "args": ["--runInBand", "--no-cache"],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
+      "sourceMaps": true,
       "windows": {
         "program": "${workspaceFolder}/node_modules/jest/bin/jest"
       }
@@ -24,6 +25,7 @@
       "args": ["--runInBand", "--no-cache", "${relativeFile}"],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
+      "sourceMaps": true,
       "windows": {
         "program": "${workspaceFolder}/node_modules/jest/bin/jest"
       }

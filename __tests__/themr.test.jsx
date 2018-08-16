@@ -9,7 +9,15 @@ const BaseComponent = ({ className, theme, ...rest }) => (
 describe('themr', () => {
   it('creates a decorated React component', () => {
     const MyThemedComponent = themr('MyThemedComponent')(BaseComponent);
-    const wrapper = shallow(<MyThemedComponent />);
+    const wrapper = shallow(<MyThemedComponent />).dive();
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('creates a decorated React component that can accept `theme` props with CSS property-value objects', () => {
+    const MyThemedComponent = themr('MyThemedComponent')(BaseComponent);
+    const wrapper = shallow(
+      <MyThemedComponent theme={{ root: { backgroundColor: 'rebeccapurple' } }} />
+    ).dive();
     expect(wrapper).toMatchSnapshot();
   });
 });
