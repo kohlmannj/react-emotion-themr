@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`createEmotionTheme renders a theme of objects 1`] = `".css-ux9s12-root{background-color:rebeccapurple;}.css-1pzc2nm-foo{font-size:32px;}"`;

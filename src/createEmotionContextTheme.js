@@ -1,3 +1,5 @@
+import { createEmotionTheme } from './createEmotionTheme';
+
 export function createEmotionContextTheme(contextThemeObj) {
   if (typeof contextThemeObj !== 'object' || contextThemeObj === null) {
     return contextThemeObj;
@@ -6,7 +8,7 @@ export function createEmotionContextTheme(contextThemeObj) {
   return Object.keys(contextThemeObj).reduce(
     (emotionContextTheme, componentName) => ({
       ...emotionContextTheme,
-      [componentName]: createEmotionCssModule(contextThemeObj[componentName]),
+      [componentName]: createEmotionTheme(contextThemeObj[componentName]),
     }),
     {}
   );

@@ -11,7 +11,10 @@ export function createEmotionTheme(classNamesObj) {
 
     // Only add the className if `value` is a non-null object or a string
     if (typeofValueIsNonNullObject || typeof value === 'string') {
-      return { ...emotionTheme, [className]: typeofValueIsNonNullObject ? css(value) : value };
+      return {
+        ...emotionTheme,
+        [className]: typeofValueIsNonNullObject ? css(value, `label:${className};`) : value,
+      };
     }
 
     return emotionTheme;
