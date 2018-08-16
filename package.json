@@ -1,6 +1,6 @@
 {
   "name": "@kohlmannj/react-emotion-themr",
-  "version": "1.0.0-beta.0",
+  "version": "1.0.0-beta.1",
   "description": "A decorated version of @friendsofreactjs/react-css-themr that renders object-type CSS-in-JS styles using emotion",
   "main": "lib/index.js",
   "source": "src/index.js",
