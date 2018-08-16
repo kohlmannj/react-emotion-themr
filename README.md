@@ -12,11 +12,11 @@ This package allows you to theme a React component by:
 
 1. Decorating the component with this package's `themr()` [Higher-Order Component](https://reactjs.org/docs/higher-order-components.html)
 2. Passing the decorated component a `theme` prop containing object-type CSS property-value pairs, in addition to CSS modules (i.e. an object of strings)
-3. Using this package's `ThemeProvider` component to pass [context themes](https://github.com/FriendsOfReactJS/react-css-themr#context-theming) to child components
+3. Using this package's `ThemeProvider` component to pass [context themes](https://github.com/FriendsOfReactJS/react-css-themr#context-theming) containing object-type CSS property-value pairs to child components
 
 (Don't worry, there are [usage examples](#usage-examples) below!)
 
-Beyond that, our `themr()` and `ThemeProvider` have the same API as the originals from [@friendsofreactjs/react-css-themr](https://github.com/FriendsOfReactJS/react-css-themr), so please read that project's documentation as well!
+Beyond that, our `themr()` and `ThemeProvider` have the same API as the originals from [@friendsofreactjs/react-css-themr](https://github.com/FriendsOfReactJS/react-css-themr), so please read that project's documentation as well.
 
 ## Installation
 
