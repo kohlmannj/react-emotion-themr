@@ -13,6 +13,14 @@ describe('themr', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('sets a displayName for the decorated React component', () => {
+    const MyThemedComponent = themr('MyThemedComponent')(BaseComponent);
+    expect(MyThemedComponent.displayName).toMatch('EmotionThemed');
+
+    const MyAnonymousThemedComponent = themr('MyAnonymousThemedComponent')(() => <div />);
+    expect(MyAnonymousThemedComponent.displayName).toBe('EmotionThemedComponent');
+  });
+
   it('creates a decorated React component that can accept `theme` props with CSS property-value objects', () => {
     const MyThemedComponent = themr('MyThemedComponent')(BaseComponent);
     const wrapper = shallow(
