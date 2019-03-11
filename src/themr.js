@@ -1,4 +1,3 @@
-import React from 'react';
 import { themr as cssThemr } from '@friendsofreactjs/react-css-themr';
 import { createEmotionTheme } from './createEmotionTheme';
 
