@@ -4,7 +4,7 @@ import * as reactEmotionThemr from '../src';
 
 const importNames = readdirSync(join(__dirname, '..', 'src'))
   .map(f => f.replace(extname(f), ''))
-  .filter(f => f !== 'index');
+  .filter(f => f !== 'index' && f !== '.DS_Store');
 
 describe('index', () => {
   it(`contains an export for each file in src (other than 'index')`, () => {
