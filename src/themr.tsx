@@ -28,9 +28,7 @@ export function themr(
       );
     };
 
-    EmotionThemed.displayName = `EmotionThemed${component.displayName ||
-      component.name ||
-      'Component'}`;
+    EmotionThemed.displayName = `EmotionThemed${component.displayName || 'Component'}`;
 
     return EmotionThemed;
   };

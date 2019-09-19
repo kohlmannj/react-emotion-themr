@@ -4,9 +4,8 @@ module.exports = api => ({
       '@babel/preset-env',
       {
         modules: api.env('test') ? 'commonjs' : false,
-        corejs: 3,
-
-        useBuiltIns: 'entry',
+        // corejs: 3,
+        useBuiltIns: false,
       },
     ],
     '@babel/preset-react',
