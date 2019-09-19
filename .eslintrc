@@ -11,6 +11,11 @@
     "react/display-name": "off",
     "react/prop-types": "off"
   },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
   "overrides": [
     {
       "files": "*.{js,jsx}",
