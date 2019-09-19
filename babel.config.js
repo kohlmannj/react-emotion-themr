@@ -14,6 +14,7 @@ module.exports = api => ({
   plugins: [
     [
       '@babel/plugin-transform-runtime',
+      // TODO: change this for the CJS build (so that the CJS build doesn't try to import ES runtime helpers)
       { corejs: 3, proposals: true, useESModules: !api.env('test') },
     ],
   ],
