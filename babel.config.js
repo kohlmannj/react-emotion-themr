@@ -13,6 +13,9 @@ module.exports = api => ({
     '@babel/preset-typescript',
   ],
   plugins: [
-    ['@babel/plugin-transform-runtime', { corejs: 3, proposals: true, useESModules: true }],
+    [
+      '@babel/plugin-transform-runtime',
+      { corejs: 3, proposals: true, useESModules: !api.env('test') },
+    ],
   ],
 });
