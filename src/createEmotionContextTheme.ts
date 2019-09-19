@@ -18,12 +18,13 @@ export function createEmotionContextTheme<T>(
     contextThemeObj !== null
   ) {
     return Object.keys(contextThemeObj).reduce(
-      (emotionContextTheme, componentName) => ({
-        ...emotionContextTheme,
-        [componentName]: createEmotionTheme(
-          (contextThemeObj as TReactEmotionThemrTheme)[componentName]
-        ),
-      }),
+      (emotionContextTheme, componentName) =>
+        // eslint-disable-next-line compat/compat
+        Object.assign({}, emotionContextTheme, {
+          [componentName]: createEmotionTheme(
+            (contextThemeObj as TReactEmotionThemrTheme)[componentName]
+          ),
+        }),
       {} as TReactCSSThemrTheme
     ) as T extends TReactEmotionThemrContextTheme ? TReactCSSThemrTheme : never;
   }

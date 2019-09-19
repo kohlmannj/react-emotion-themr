@@ -22,13 +22,13 @@ export function createEmotionTheme<T>(classNamesObj: T): RenderedEmotionTheme<T>
         const value = (classNamesObj as TReactEmotionThemrTheme)[className];
 
         if ((typeof value === 'object' && value !== null) || typeof value === 'string') {
-          return {
-            ...emotionTheme,
+          // eslint-disable-next-line compat/compat
+          return Object.assign({}, emotionTheme, {
             [className]:
               typeof value === 'object' && value !== null
                 ? css(value, `label:${className};`)
                 : value,
-          } as TReactCSSThemrTheme;
+          }) as TReactCSSThemrTheme;
         }
 
         return emotionTheme;

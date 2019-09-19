@@ -6,13 +6,18 @@ import pkg from './package.json';
 
 const input = 'src/index.ts';
 const extensions = ['.ts', '.tsx'];
-const external = [];
+const external = [
+  '@babel/runtime-corejs3/helpers/esm/defineProperty',
+  '@babel/runtime-corejs3/helpers/esm/typeof',
+  '@babel/runtime-corejs3/helpers/esm/extends',
+  '@babel/runtime-corejs3/core-js-stable/object/assign',
+  '@babel/runtime-corejs3/core-js-stable/object/keys',
+  '@babel/runtime-corejs3/core-js-stable/instance/reduce',
+  '@babel/runtime-corejs3/core-js-stable/instance/concat',
+];
 
 const plugins = [
-  autoExternal({
-    builtins: false,
-    peerDependencies: true,
-  }),
+  autoExternal(),
   resolve({ extensions, preferBuiltIns: false }),
   babel({ extensions, exclude: ['node_modules/**'], runtimeHelpers: true }),
 ];

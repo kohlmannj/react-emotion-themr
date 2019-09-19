@@ -21,7 +21,12 @@ export function themr(
     // Wrap CssThemed in another component which knows how to handle the `theme` prop
     const EmotionThemed = (
       props: P & { mapThemrProps?: TMapThemrProps<P>; theme?: TReactEmotionThemrTheme }
-    ): JSX.Element => <CssThemed {...props} theme={createEmotionTheme(props.theme)} />;
+    ): JSX.Element => {
+      return (
+        // eslint-disable-next-line compat/compat
+        <CssThemed {...Object.assign({}, props, { theme: createEmotionTheme(props.theme) })} />
+      );
+    };
 
     EmotionThemed.displayName = `EmotionThemed${component.displayName ||
       component.name ||
