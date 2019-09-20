@@ -28,7 +28,14 @@ export function themr(
       );
     };
 
-    EmotionThemed.displayName = `EmotionThemed${component.displayName || 'Component'}`;
+    let name = 'Component';
+    if (component.displayName) {
+      name = component.displayName;
+    } else if ('name' in component) {
+      name = component.name;
+    }
+
+    EmotionThemed.displayName = `EmotionThemed${name}`;
 
     return EmotionThemed;
   };

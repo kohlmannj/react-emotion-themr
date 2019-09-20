@@ -27,8 +27,9 @@ const createRollupPluginBabelConfig = (format = 'es') => ({
       '@babel/preset-env',
       {
         modules: false,
-        // corejs: 3,
-        // useBuiltIns: 'usage',
+        corejs: 3,
+        useBuiltIns: 'usage',
+        exclude: ['es.function.name'],
       },
     ],
     '@babel/preset-react',

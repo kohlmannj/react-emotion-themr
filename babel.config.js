@@ -5,7 +5,8 @@ module.exports = api => ({
       {
         modules: api.env('test') ? 'commonjs' : false,
         // corejs: 3,
-        useBuiltIns: false,
+        // useBuiltIns: 'usage',
+        // exclude: ['es.function.name'],
       },
     ],
     '@babel/preset-react',
