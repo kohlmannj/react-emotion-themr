@@ -4,7 +4,7 @@
   "description": "A decorated version of @friendsofreactjs/react-css-themr that renders object-type CSS-in-JS styles using emotion",
   "main": "dist/react-emotion-themr.cjs.js",
   "module": "dist/react-emotion-themr.esm.js",
-  "types": "dist/index.d,ts",
+  "types": "dist/index.d.ts",
   "source": "src/index.js",
   "repository": "https://github.com/kohlmannj/react-emotion-themr",
   "author": "Joseph Kohlmann <kohlmannj@mac.com>",
