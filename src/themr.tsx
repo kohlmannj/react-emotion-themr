@@ -29,9 +29,9 @@ export function themr(
     };
 
     let name = 'Component';
-    if (component.displayName) {
+    if (component.displayName && component.displayName !== '') {
       name = component.displayName;
-    } else if ('name' in component) {
+    } else if ('name' in component && component.name !== '') {
       name = component.name;
     }
 
